@@ -16,6 +16,5 @@ Browser Support
 The method relies and CSS animations and rounded borders, so any browsers supporting that should be green.
 
 Check Can I Use for detailed information:
-http://caniuse.com/#feat=css-animation
-
-http://caniuse.com/#feat=border-radius
+- http://caniuse.com/#feat=css-animation
+- http://caniuse.com/#feat=border-radius
