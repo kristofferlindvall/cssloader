@@ -1,0 +1,68 @@
+.loader {
+    /* Set up rotation */
+    -webkit-animation-name: loader-keyframes;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: loader-keyframes;
+    -moz-animation-duration: 1000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+	-o-animation-name: loader-keyframes;
+    -o-animation-duration: 1000ms;
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+	animation-name: loader-keyframes;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+	/* As an inline-block, the loader can be used inline. */
+	display: inline-block;
+}
+
+.loader, .loader:before, .loader:after {
+	-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+	width: 23px;
+	height: 23px;
+}
+
+.loader:before, .loader:after {
+	display: block;
+	content: '';
+
+	/* Center elements on top of main element */
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	/* The ring is created by a circular border. One full and one or two quarterly borders on top of each others. */
+	border-radius: 20px;
+	border-style: solid;
+	border-width: 4px;
+}
+
+.loader:before {
+	/* "Rail" color */
+	border-color: #ddd;
+}
+
+.loader:after {
+	/* "Train" color */
+	border-color: #333 transparent transparent;
+}
+
+@-moz-keyframes loader-keyframes {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes loader-keyframes {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes loader-keyframes {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
